@@ -1,0 +1,236 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    src: url(https://fonts.gstatic.com/s/roboto/v27/KFOkCnqEu92Fr1MmgWxP.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100, 300, 500, 700, 900;
+    src: url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmSU5fBBc9.ttf) format('truetype');
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+
+
+    background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(157.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(135deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%, rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%, rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%, rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%, rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%, rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%, rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%), linear-gradient(90deg, rgb(195, 195, 195), rgb(145, 121, 76));
+    background-blend-mode: overlay, overlay, overlay, normal;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Scroll bar styling */
+:root {
+    --secondaryColor: #c2a84a;
+}
+
+::-webkit-scrollbar {
+    background-color: black;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondaryColor);
+}
+
+.container {
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* Header Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+    padding: 0.6rem 0.5rem;
+    background-color: #000000;
+    backdrop-filter: blur(10px);
+    border-radius: 10rem;
+    margin-top: 1rem;
+}
+
+/* Les lien dans Header Bar */
+.websiteSections>a {
+    padding: 0 20px;
+    color: var(--secondaryColor);
+    margin: 0 5px;
+    text-decoration: unset;
+    transition: .3s ease;
+}
+
+/* styling quand je mis le cursor au liens */
+.websiteSections>a:hover {
+    color: white;
+    text-align: center;
+    margin-right: auto;
+    text-decoration: underline;
+}
+
+/*Logo du site web */
+.logo {
+    width: 75px;
+    height: 75px;
+    margin-left: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.course {
+    width: 90vw;
+    height: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 20vh;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.courseInfo {
+    width: 100%;
+    height: fit-content;
+}
+
+.courseTitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+.coursePrimaryImg {
+    width: 500px;
+    min-height: 300px;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.courseInfo>div {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.courseDescription {
+    width: 100%;
+    font-weight: bold;
+}
+
+.partTwo {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 15px;
+    margin-left: 15px;
+}
+
+.coursePrice {
+    width: fit-content;
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.originalPrice {
+    text-decoration: line-through;
+    color: rgb(67, 67, 67);
+    font-size: 25px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+}
+
+.actions>* {
+    padding: 10px 15px;
+    font-weight: bold;
+    background-color: #000000;
+    color: #c2a84a;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.actions>*:hover {
+    background-color: #c2a84a;
+    color: black;
+}
+
+.courseSecondaryImgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.courseSecondaryImg {
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.step{
+    width: calc(100% / 3);
+    height: fit-content;
+    padding: 20px;
+    background-color: #c2a84a;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.step>*{
+    margin: 15px 0;
+}
+.step.active{
+    background-color: #000000;
+    color: #c2a84a;
+    padding: 25px;
+}
+.stepTitle{
+    font-weight: bold;
+    font-size: 25px;
+}
+.stepDuration{
+    font-weight: bold;
+}
