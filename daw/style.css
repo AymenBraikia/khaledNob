@@ -1,0 +1,426 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    src: url(https://fonts.gstatic.com/s/roboto/v27/KFOkCnqEu92Fr1MmgWxP.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100, 300, 500, 700, 900;
+    src: url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmSU5fBBc9.ttf) format('truetype');
+}
+
+/* Scroll bar styling */
+:root {
+    --secondaryColor: #c2a84a;
+}
+
+::-webkit-scrollbar {
+    background-color: black;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondaryColor);
+}
+
+body {
+    background-image: linear-gradient(112.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(157.5deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(135deg, rgb(214, 214, 214) 0%, rgb(214, 214, 214) 10%,rgb(195, 195, 195) 10%, rgb(195, 195, 195) 53%,rgb(176, 176, 176) 53%, rgb(176, 176, 176) 55%,rgb(157, 157, 157) 55%, rgb(157, 157, 157) 60%,rgb(137, 137, 137) 60%, rgb(137, 137, 137) 88%,rgb(118, 118, 118) 88%, rgb(118, 118, 118) 91%,rgb(99, 99, 99) 91%, rgb(99, 99, 99) 100%),linear-gradient(90deg, rgb(195, 195, 195),rgb(145,121,76)); background-blend-mode:overlay,overlay,overlay,normal;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1500px;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    padding: 20px;
+    transition: margin-left 0.5s ease;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* Header Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+    padding: 0.6rem 0.5rem;
+    background-color: #000000;
+    backdrop-filter: blur(10px);
+    border-radius: 10rem;
+    margin-top: 1rem;
+}
+
+/* Les lien dans Header Bar */
+.websiteSections>a {
+    padding: 0 20px;
+    color: var(--secondaryColor);
+    margin: 0 5px;
+    text-decoration: unset;
+    transition: .3s ease;
+}
+/* styling quand je mis le cursor au liens */
+.websiteSections>a:hover {
+    color: white;
+    text-align: center;
+    margin-right: auto;
+    text-decoration: underline;
+}
+/*Logo du site web */
+.logo {
+    width: 75px;
+    height: 75px;
+    margin-left: 50px;
+    display: block;
+    margin: 0 auto;
+}
+/*Bar nav a gauche */
+nav {
+    width: 15vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    padding-right: 19.45px;
+    z-index: 0;
+    overflow-y: 0;
+}
+
+/*Contenu de la Bar nav */
+.students {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+/*Contenu de la Bar nav */
+.student {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    font-size: 14px;
+    color: white;
+}
+/*Contenu de la Bar nav */
+.student > * {
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 5px;
+}
+
+/*Contenu de la Bar nav */
+.icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+}
+
+/* dimentions pour le contenu principale du site "section 1" pour ne pas écraser "aside" et la Bar nav */
+.section1 {
+    margin: 100px 0 0 0;
+    width: 65vw;
+    height: fit-content;
+}
+
+/* Styling du contenu principale du site */
+.articles {
+    width: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 60px;
+}
+/* Styling du contenu principale du site */
+.article {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+/* Styling du contenu principale du site */
+.articleImage {
+    width: 300px;
+    height: 200px;
+}
+/* Styling du contenu principale du site */
+.info {
+    width: calc(100% - 240px);
+    height: 100%;
+    min-height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 5px;
+}
+/* Styling du contenu principale du site */
+.title {
+    font-weight: bold;
+    margin: 0;
+}
+/* Styling du contenu principale du site */
+.moreInfo {
+    color: var(--secondaryColor);
+    transition: .3s ease;
+    color: #000000;
+}
+/* Styling du contenu principale du site */
+.moreInfo:hover {
+    color: #c2a84a;
+}
+
+/* Les promotions dans <Aside> */
+.promotions {
+    position: fixed;
+    top: 60%;
+    right: 0; 
+    transform: translateY(-50%);
+    width: 350px; 
+    overflow: hidden;
+    margin-top: 150px;
+}
+/* Couleur pour les titres des promotions (afin d'attirer) */
+.atter {
+    color: red;
+}
+  /* Couleur pour les titres des promotions (afin d'attirer) */
+.promotions h2 {
+    text-decoration: underline;
+}
+/* Styling pour les paragraphes des promotions */
+.promotions p {
+text-decoration: wavy;
+font-family: cursive , 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* Styling pour le contenu des promotions */
+.promotions-content {
+    display: flex;
+    flex-direction: column-reverse; 
+    animation: scroll 25s linear infinite; /* L'animation Scroll appliquer sur les promotions */
+}
+
+.promo-item {
+    margin-bottom: 10px; /* Espace entre les promotions */
+}
+
+/* Styling pour les images des promotions */
+.promo-image {
+    width: 60%; 
+    height: auto; 
+    margin-right: 10px; /* Espace entre text et image*/
+}
+/* Paramétres de l'animation scroll */
+@keyframes scroll {
+    0% { transform: translateY(100%); } 
+    100% { transform: translateY(-100%); } 
+}
+/* button pour ouvrir et fermer la Bar nav */
+.open-nav-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor:cell;
+    z-index: 3;
+}
+/* Styling pour l'exterieur + la forme de la Bar nav */
+.sidebar {
+    position: fixed;
+    top: 140px;
+    left: -250px; 
+    width: 250px;
+    height: calc(100% - 100px);
+    background-color: #000000;
+    transition: left 1s ease; 
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+}
+/* Styling pour la bar horizontal*/
+.container hr {
+    border: none;
+    height: 10px; /* Increase the height for a thicker line */
+    background: linear-gradient(to right, #000000, #feb47b, #ffd785);
+    margin: 35px 0; /* Add more spacing */
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px; 
+}
+
+/* pour adjuster le mouvement du contenu principale lorsque l'ouverture du la Bar nav */
+.content {
+    flex: 1; 
+    transition: margin-left 1s ease; 
+    margin-left: 0;
+}
+
+/*l'interieur de la boite Commentaire */
+.comment-section {
+    border-radius: 10px;
+    width: 100%;
+    background-color: #000;
+    color: #c2a84a;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 100px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+}
+/* Styling pour les input / textarea */
+.comment-section input,textarea {
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: solid;
+    font-size: large;
+}
+
+/*L'exterieur + la forme de la boite Commentaire */
+.comment-box {
+    background-color: #000;
+    border-radius: 20px;
+    box-shadow: 20px 20px 300px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling pour button "Envoyer" */
+#formulaire-commentaire button {
+    background-color: #c2a84a;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* quand on mis le cursor au button */
+#formulaire-commentaire button:hover {
+    background-color: #7a6a2c;
+}
+
+/* Taille du textarea */
+#formulaire-commentaire textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* D'autre styling pour la forme + l'exterieur des input / textarea */
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box; 
+}
+
+/* Styling pour input quand focused */
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 10px 10px 50px #c2a84a; 
+}
+
+.recent-comments { /* box de commentaire recent */
+    border-radius: 10px;
+    background-color: #000;
+    color: #c2a84a;
+    padding: 50px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+/* Styling for the box */
+.about-us-contact {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Styling for the About Us section */
+.about-us,
+.contact-info {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #c2a84a;
+    flex: 1; 
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px; 
+}
+
+.about-us {
+    margin-right: 20px;
+}
+
+/* Styling for the Contact Info section */
+.contact-info {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Styling for the contact details */
+.contact-details {
+    color: #c2a84a;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Styling for the icons */
+.icon-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for individual icons */
+.icon-container .iconC {
+    font-size: 40px;
+    margin: 0 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
